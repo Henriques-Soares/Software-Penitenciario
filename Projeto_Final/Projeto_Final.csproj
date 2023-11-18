@@ -1,0 +1,565 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{467C16A2-9027-40C6-B7A1-63262D979931}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Projeto_Final</RootNamespace>
+    <AssemblyName>Projeto_Final</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.5.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.5\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar.SuperGrid, Version=14.1.0.18, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar2, Version=14.1.0.18, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.Instrumentation, Version=14.1.0.18, Culture=neutral, PublicKeyToken=f90dc37c26666a67" />
+    <Reference Include="DevComponents.TreeGX, Version=14.1.0.18, Culture=neutral, PublicKeyToken=055db68f670cfeab, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.BonusSkins.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v17.1.Core, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Google.Protobuf, Version=3.14.0.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.14.0\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4, Version=1.2.6.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.1.2.6\lib\net46\K4os.Compression.LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4.Streams, Version=1.2.6.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.Streams.1.2.6\lib\net46\K4os.Compression.LZ4.Streams.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Hash.xxHash, Version=1.0.6.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Hash.xxHash.1.0.6\lib\net46\K4os.Hash.xxHash.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.27.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.27\lib\net452\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySqlBackup, Version=2.3.6.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySqlBackup.NET.2.3.6.1\lib\net452\MySqlBackup.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.5.0.0\lib\net45\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Ubiety.Dns.Core, Version=2.2.1.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.27\lib\net452\Ubiety.Dns.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="ZstdNet, Version=1.4.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.27\lib\net452\ZstdNet.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Codigo\BLL\celaBLL.cs" />
+    <Compile Include="Codigo\BLL\alimentoBLL.cs" />
+    <Compile Include="Codigo\BLL\apenadoBLL.cs" />
+    <Compile Include="Codigo\BLL\camaBLL.cs" />
+    <Compile Include="Codigo\BLL\blocoBLL.cs" />
+    <Compile Include="Codigo\BLL\cuidadosBLL.cs" />
+    <Compile Include="Codigo\BLL\dashbardBLL.cs" />
+    <Compile Include="Codigo\BLL\enfermariaBLL.cs" />
+    <Compile Include="Codigo\BLL\funcionarioBLL.cs" />
+    <Compile Include="Codigo\BLL\funcaoBLL.cs" />
+    <Compile Include="Codigo\BLL\permissaoBLL.cs" />
+    <Compile Include="Codigo\BLL\processoBLL.cs" />
+    <Compile Include="Codigo\BLL\provinciaBLL.cs" />
+    <Compile Include="Codigo\BLL\refeitorioBLL.cs" />
+    <Compile Include="Codigo\BLL\tipo_crimeBLL.cs" />
+    <Compile Include="Codigo\BLL\tipo_funcionarioBLL.cs" />
+    <Compile Include="Codigo\BLL\utilizadorBLL.cs" />
+    <Compile Include="Codigo\BLL\validacoes.cs" />
+    <Compile Include="Codigo\BLL\visitaBLL.cs" />
+    <Compile Include="Codigo\BLL\visitanteBLL.cs" />
+    <Compile Include="Codigo\DAL\Acesso_BancoDados.cs" />
+    <Compile Include="Codigo\DTO\alimentoDTO.cs" />
+    <Compile Include="Codigo\DTO\apenadoDTO.cs" />
+    <Compile Include="Codigo\DTO\blocoDTO.cs" />
+    <Compile Include="Codigo\DTO\camaDTO.cs" />
+    <Compile Include="Codigo\DTO\celaDTO.cs" />
+    <Compile Include="Codigo\DTO\conexao_DTO.cs" />
+    <Compile Include="Codigo\DTO\cuidadosDTO.cs" />
+    <Compile Include="Codigo\DTO\enfermariaDTO.cs" />
+    <Compile Include="Codigo\DTO\funcaoDTO.cs" />
+    <Compile Include="Codigo\DTO\funcionarioDTO.cs" />
+    <Compile Include="Codigo\DTO\permissaoDTO.cs" />
+    <Compile Include="Codigo\DTO\processoDTO.cs" />
+    <Compile Include="Codigo\DTO\provinciaDTO.cs" />
+    <Compile Include="Codigo\DTO\refeitorioDTO.cs" />
+    <Compile Include="Codigo\DTO\tipo_crimeDTO.cs" />
+    <Compile Include="Codigo\DTO\tipo_funcionarioDTO.cs" />
+    <Compile Include="Codigo\DTO\utilizadorDTO.cs" />
+    <Compile Include="Codigo\DTO\UtilizadorLogadoDTO.cs" />
+    <Compile Include="Codigo\DTO\visitaDTO.cs" />
+    <Compile Include="Codigo\DTO\visitanteDTO.cs" />
+    <Compile Include="frm_backup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_backup.Designer.cs">
+      <DependentUpon>frm_backup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_barra_processamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_barra_processamento.Designer.cs">
+      <DependentUpon>frm_barra_processamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_cad_funcao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_cad_funcao.Designer.cs">
+      <DependentUpon>frm_cad_funcao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_cad_utilizador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_cad_utilizador.Designer.cs">
+      <DependentUpon>frm_cad_utilizador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_cad_alimento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_cad_alimento.Designer.cs">
+      <DependentUpon>frm_cad_alimento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_cad_apenado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_cad_apenado.Designer.cs">
+      <DependentUpon>frm_cad_apenado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_cad_bloco.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_cad_bloco.Designer.cs">
+      <DependentUpon>frm_cad_bloco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_cad_cama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_cad_cama.Designer.cs">
+      <DependentUpon>frm_cad_cama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_cad_cela.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_cad_cela.Designer.cs">
+      <DependentUpon>frm_cad_cela.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_cad_enfermagem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_cad_enfermagem.Designer.cs">
+      <DependentUpon>frm_cad_enfermagem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_cad_funcionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_cad_funcionario.Designer.cs">
+      <DependentUpon>frm_cad_funcionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_cad_cuidados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_cad_cuidados.Designer.cs">
+      <DependentUpon>frm_cad_cuidados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_cad_processo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_cad_processo.Designer.cs">
+      <DependentUpon>frm_cad_processo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_cad_refeitorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_cad_refeitorio.Designer.cs">
+      <DependentUpon>frm_cad_refeitorio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_cad_tipo_crime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_cad_tipo_crime.Designer.cs">
+      <DependentUpon>frm_cad_tipo_crime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_cad_tipo_funcionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_cad_tipo_funcionario.Designer.cs">
+      <DependentUpon>frm_cad_tipo_funcionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_cad_visita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_cad_visita.Designer.cs">
+      <DependentUpon>frm_cad_visita.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_cad_visitante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_cad_visitante.Designer.cs">
+      <DependentUpon>frm_cad_visitante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_config.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_config.Designer.cs">
+      <DependentUpon>frm_config.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_list_cuidados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_list_cuidados.Designer.cs">
+      <DependentUpon>frm_list_cuidados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_list_utilizador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_list_utilizador.Designer.cs">
+      <DependentUpon>frm_list_utilizador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_list_alimento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_list_alimento.Designer.cs">
+      <DependentUpon>frm_list_alimento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_list_apenado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_list_apenado.Designer.cs">
+      <DependentUpon>frm_list_apenado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_list_bloco.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_list_bloco.Designer.cs">
+      <DependentUpon>frm_list_bloco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_list_cama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_list_cama.Designer.cs">
+      <DependentUpon>frm_list_cama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_list_cela.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_list_cela.Designer.cs">
+      <DependentUpon>frm_list_cela.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_list_enfermaria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_list_enfermaria.Designer.cs">
+      <DependentUpon>frm_list_enfermaria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_list_funcionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_list_funcionario.Designer.cs">
+      <DependentUpon>frm_list_funcionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_list_funcao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_list_funcao.Designer.cs">
+      <DependentUpon>frm_list_funcao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_list_refeitorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_list_refeitorio.Designer.cs">
+      <DependentUpon>frm_list_refeitorio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_list_tipocrime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_list_tipocrime.Designer.cs">
+      <DependentUpon>frm_list_tipocrime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_list_visita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_list_visita.Designer.cs">
+      <DependentUpon>frm_list_visita.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_list_visitante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_list_visitante.Designer.cs">
+      <DependentUpon>frm_list_visitante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_login.Designer.cs">
+      <DependentUpon>frm_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_principal.Designer.cs">
+      <DependentUpon>frm_principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_list_tipo_funcionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_list_tipo_funcionario.Designer.cs">
+      <DependentUpon>frm_list_tipo_funcionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_list_processo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_list_processo.Designer.cs">
+      <DependentUpon>frm_list_processo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_senha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_senha.Designer.cs">
+      <DependentUpon>frm_senha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_sobre_sistema.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_sobre_sistema.Designer.cs">
+      <DependentUpon>frm_sobre_sistema.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_utilizador_funcao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_utilizador_funcao.Designer.cs">
+      <DependentUpon>frm_utilizador_funcao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Permissão_funcao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Permissão_funcao.Designer.cs">
+      <DependentUpon>Permissão_funcao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frm_backup.resx">
+      <DependentUpon>frm_backup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_barra_processamento.resx">
+      <DependentUpon>frm_barra_processamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_cad_funcao.resx">
+      <DependentUpon>frm_cad_funcao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_cad_utilizador.resx">
+      <DependentUpon>frm_cad_utilizador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_cad_alimento.resx">
+      <DependentUpon>frm_cad_alimento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_cad_apenado.resx">
+      <DependentUpon>frm_cad_apenado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_cad_bloco.resx">
+      <DependentUpon>frm_cad_bloco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_cad_cama.resx">
+      <DependentUpon>frm_cad_cama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_cad_cela.resx">
+      <DependentUpon>frm_cad_cela.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_cad_enfermagem.resx">
+      <DependentUpon>frm_cad_enfermagem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_cad_funcionario.resx">
+      <DependentUpon>frm_cad_funcionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_cad_cuidados.resx">
+      <DependentUpon>frm_cad_cuidados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_cad_processo.resx">
+      <DependentUpon>frm_cad_processo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_cad_refeitorio.resx">
+      <DependentUpon>frm_cad_refeitorio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_cad_tipo_crime.resx">
+      <DependentUpon>frm_cad_tipo_crime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_cad_tipo_funcionario.resx">
+      <DependentUpon>frm_cad_tipo_funcionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_cad_visita.resx">
+      <DependentUpon>frm_cad_visita.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_cad_visitante.resx">
+      <DependentUpon>frm_cad_visitante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_config.resx">
+      <DependentUpon>frm_config.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_list_cuidados.resx">
+      <DependentUpon>frm_list_cuidados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_list_utilizador.resx">
+      <DependentUpon>frm_list_utilizador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_list_alimento.resx">
+      <DependentUpon>frm_list_alimento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_list_apenado.resx">
+      <DependentUpon>frm_list_apenado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_list_bloco.resx">
+      <DependentUpon>frm_list_bloco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_list_cama.resx">
+      <DependentUpon>frm_list_cama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_list_cela.resx">
+      <DependentUpon>frm_list_cela.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_list_enfermaria.resx">
+      <DependentUpon>frm_list_enfermaria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_list_funcionario.resx">
+      <DependentUpon>frm_list_funcionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_list_funcao.resx">
+      <DependentUpon>frm_list_funcao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_list_processo.resx">
+      <DependentUpon>frm_list_processo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_list_refeitorio.resx">
+      <DependentUpon>frm_list_refeitorio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_list_tipocrime.resx">
+      <DependentUpon>frm_list_tipocrime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_list_visita.resx">
+      <DependentUpon>frm_list_visita.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_list_visitante.resx">
+      <DependentUpon>frm_list_visitante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_login.resx">
+      <DependentUpon>frm_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_principal.resx">
+      <DependentUpon>frm_principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_list_tipo_funcionario.resx">
+      <DependentUpon>frm_list_tipo_funcionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_senha.resx">
+      <DependentUpon>frm_senha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_sobre_sistema.resx">
+      <DependentUpon>frm_sobre_sistema.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_utilizador_funcao.resx">
+      <DependentUpon>frm_utilizador_funcao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Permissão_funcao.resx">
+      <DependentUpon>Permissão_funcao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\T-LOGIN %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-policial-masculino-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-homem-de-negócios-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-senha-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CELAS-E-LOGO0-800x500_1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
