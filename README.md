@@ -42,7 +42,7 @@ Execução do Aplicativo
 
 Configuração Inicial
 
-Ao configurar o Sistema Penitenciário, utilize as seguintes credenciais padrão:
+Ao configurar o Software Penitenciário, utilize as seguintes credenciais padrão:
 
     Usuário: HP
     Senha: HP2022
