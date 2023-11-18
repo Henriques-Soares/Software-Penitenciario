@@ -37,7 +37,7 @@ Xampp/WampServer
 
 Execução do Aplicativo
 
-    Navegue até a pasta "Sistema Penitenciario\Projeto_Final\bin\Debug".
+    Navegue até a pasta "Projeto_Final\bin\Debug".
     Execute o arquivo "Projeto_Final.exe".
 
 Configuração Inicial
