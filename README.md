@@ -1,10 +1,10 @@
-Sistema Penitenciário
+Software Penitenciário
 Descrição
 
-O Sistema Penitenciário é uma aplicação robusta projetada para gerenciar informações dentro de instituições penitenciárias. Desenvolvido com o propósito de proporcionar uma gestão eficiente e segura, o sistema abrange desde o registro de detentos até a administração de procedimentos internos.
+O Software Penitenciário é uma aplicação robusta projetada para gerenciar informações dentro de instituições penitenciárias. Desenvolvido com o propósito de proporcionar uma gestão eficiente e segura, o sistema abrange desde o registro de detentos até a administração de procedimentos internos.
 Requisitos
 
-Para garantir o correto funcionamento do Sistema Penitenciário, certifique-se de atender aos seguintes requisitos:
+Para garantir o correto funcionamento do Software Penitenciário, certifique-se de atender aos seguintes requisitos:
 
     Mysql-Workbench:
         Abra o Mysql-Workbench.
