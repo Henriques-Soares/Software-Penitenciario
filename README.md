@@ -48,8 +48,8 @@ Ao configurar o Software Penitenciário, utilize as seguintes credenciais padrã
     Senha: HP2022
 
 Esteja ciente de que essas instruções são uma visão geral simplificada do processo de instalação e configuração. Certifique-se de ler a documentação completa fornecida com o projeto para obter informações detalhadas sobre funcionalidades e configurações avançadas.
-Como Contribuir
 
+Como Contribuir:
 Para futuras equipes de desenvolvimento, entendo os desafios de trabalhar com código de terceiros. Estou aqui para ajudar! Se você tiver alguma dúvida ou precisar de assistência relacionada ao código, não hesite em entrar em contato. Entre em contato comigo através dos links no meu perfil do GitHub.
 
 Sobre o Autor
